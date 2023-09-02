@@ -55,8 +55,8 @@
       on_finish: function(data) {
         console.log("Has it cached or something?");
         console.log(data);
-        document.querySelector('iframe').contentWindow.postMessage('text', '*');
-        //window.postMessage("I hate you Qualtrics", "https://cityunilondon.eu.qualtrics.com/");
+        // document.querySelector('iframe').contentWindow.postMessage('text', '*');
+        window.postMessage("I hate you Qualtrics", "https://cityunilondon.eu.qualtrics.com/");
       }
     };
 	timeline.push(fixation1);
