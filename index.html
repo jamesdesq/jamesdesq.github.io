@@ -151,8 +151,12 @@
     };
     timeline.push(debrief_block);
 
+    window.addEventListener("load", (event) => {
+      jsPsych.run(timeline);
+      console.log("page is fully loaded");
+    });
+
     /* start the experiment */
-    jsPsych.run(timeline);
 
   </script>
 </html>
