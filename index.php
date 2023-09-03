@@ -54,9 +54,10 @@
       },
       on_finish: function(data) {
         console.log("Has it cached or something?");
-        console.log(data);
-        // document.querySelector('iframe').contentWindow.postMessage('text', '*');
-        window.postMessage("I hate you Qualtrics", "https://cityunilondon.eu.qualtrics.com/");
+        console.log("I am the ", data);
+        console.log(window.parent);
+
+        window.parent.postMessage(data, "*");
       }
     };
 	timeline.push(fixation1);
